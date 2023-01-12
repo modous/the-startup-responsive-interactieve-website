@@ -1,0 +1,38 @@
+:root{
+    --yellow: #f7a100;
+    --white: #ffffff;
+
+}
+
+body{
+    font-family: 'Avenir',arial,sans-serif;
+    margin: 0px;
+    
+}
+header{
+    background-color: var(--yellow);
+    
+}
+header ul{
+    list-style-type: none;
+}
+
+img{
+    max-width: 390px;
+}
+#more {
+    display: none;
+}
+
+#map { 
+    height: 400px; 
+    margin: 10px;
+}
+
+button{
+    background-color: var(--yellow);
+    color: var(--white);
+    border: var(--yellow);
+    padding: 8px;
+    font-size: 18px;
+}
