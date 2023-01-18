@@ -1,38 +1,79 @@
 :root{
-    --yellow: #f7a100;
+
+    /* Collor */
+    --Yellow: #f7a100;
     --white: #ffffff;
 
+    /* Font */
+    --Font-type:  'Avenir',arial,sans-serif;
 }
 
-body{
-    font-family: 'Avenir',arial,sans-serif;
-    margin: 0px;
-    
-}
+/* Header */
 header{
-    background-color: var(--yellow);
+    background-color: var(--Yellow);
     
 }
 header ul{
     list-style-type: none;
 }
 
+
+/* Body */
+body{
+    font-family: var(--Font-type);
+    margin: 0px;
+    
+}
+
+
 img{
     max-width: 390px;
+    
 }
+
+/* Readmore */
+.bold{  
+    padding-top: 50px;
+    color: var(--Yellow);
+    
+}
+
 #more {
     display: none;
 }
 
+
+/* Map */
 #map { 
     height: 400px; 
     margin: 10px;
 }
 
 button{
-    background-color: var(--yellow);
+    background-color: var(--Yellow);
     color: var(--white);
-    border: var(--yellow);
+    border: var(--Yellow);
     padding: 8px;
     font-size: 18px;
+}
+
+
+/* Media */
+@media (min-width: 400px){
+    img{
+        
+        max-width: 700px;
+        margin: 20px;
+        width: 92%;
+    }
+}
+
+@media (min-width: 760px){
+    img{
+        display: block;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 92%;
+    }
 }
