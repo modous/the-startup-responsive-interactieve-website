@@ -50,13 +50,7 @@ ul li a:hover{
     border-radius: 20px;
     padding: 12px;
 }
-.home{
-   /* margin-left: 200px; */
-}
 
-.login{
-    margin-right: 100px;
-}
 
 .home:hover, .login:hover{
     background-color: #654202;
@@ -89,10 +83,12 @@ ul li a:hover{
     display: none;
     position: relative;
     background-color: #f1f1f1; 
-    min-width: 100px;
+    min-width: 60px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    margin-bottom: 10px;
+    width: 150px;
   }
 
 .dropdown-content a {
@@ -118,9 +114,26 @@ body{
     
 }
 
+
+
 .logo{
     max-width: 8rem;
     margin-left: 20px;
+    animation-name: webLogo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes webLogo{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.3);
+      }
+      100% {
+        transform: scale(1);
+      }
 }
 
 .carousel{
@@ -129,11 +142,17 @@ body{
 
 .huis-prijs{
     float: right;
-    margin-right: 50px;
+    margin-right: 20%;
 }
 
 .adres{
-    margin-left: 30px;
+    margin-left: 10%;
+    padding: 20px;
+    background-color: #654202;
+    color: white;
+    border-radius: 20px;
+    max-width: 300px;
+    margin-top: 20px;
 }
 
 /* Readmore */
@@ -152,6 +171,9 @@ body{
 #map { 
     height: 400px; 
     margin: 10px;
+    width: 50%;
+    display: flex;
+    float: right;
 }
 
 /* Contact button */
@@ -163,7 +185,8 @@ body{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     color: white;
-
+    width: 300px;
+    
 }
 .contact-button, #myBtn {
     background-color: var(--Yellow);
@@ -184,7 +207,12 @@ body{
 /* omschijving  */
 .omschrijving{
     margin-top: 100px;
-    
+    margin-left: 10%;
+}
+
+.omschrijving-map{
+    display: flex;
+    justify-content: center;
 }
 
 /* Media */
@@ -198,16 +226,11 @@ body{
 }
 
 @media (min-width: 550px){
-    header ul{
-        display: contents;
-        text-decoration: none;
-    }
+    
     ul li a{
         text-decoration: none;
     }
-    .dropbtn{
-        display: none;
-    }
+    
     .logo{
         margin-left: 50px;
     }
@@ -225,6 +248,13 @@ body{
     }
 }
 @media (min-width: 880px){
+    .dropbtn{
+        display: none;
+    }
+    header ul{
+        display: contents;
+        text-decoration: none;
+    }
         .carousel{
             display: block;
             margin-top: 50px;
@@ -239,17 +269,100 @@ body{
     
 }
 
-/* @media (min-width: 1000px){
-    .carousel{
-        display: block;
-        margin-top: 50px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 92%;
-    }
-    .logo{
-        margin-left: 150px;
-    }
 
-} */
+
+
+
+
+
+
+/* CAROUSEL */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

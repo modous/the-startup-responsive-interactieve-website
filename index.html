@@ -24,8 +24,8 @@
     <title>Funda</title>
   </head>
   <header>
-    
     <img class="logo" src="assets/logo.svg" alt="logo" />
+   
 
     <ul class="tabjes">
       <li>
@@ -51,25 +51,66 @@
     <div class="dropdown">
       <button onclick="dropDown()" class="dropbtn">Menu</button>
       <div id="myDropdown" class="dropdown-content">
+        <a class="home" href="#home"><i class="fa fa-fw fa-home"></i> Mijn huis</a>
+        <a class="login" href="#login"><i class="fa fa-fw fa-user"></i> Login</a>
         <a href="#kopen">Kopen</a>
         <a href="#Huren">Huren</a>
         <a href="#Verkopen">Verkopen</a>
+
       </div>
     </div>
   </header>
+
   <body>
     <div class="adres">
       <h1>Oudartstraat 22</h1>
       <p>5708 GR Helmond</p>
-      <h2 class="huis-prijs">425000 k.k.</h2>
+      
     </div>
+    <h2 class="huis-prijs">425000 k.k.</h2>
+    <!-- Carousel -->
 
-    <img class="carousel" src="assets/huis.jpeg" alt="huis" />
+    <!-- <img class="carousel" src="assets/huis.jpeg" alt="huis" /> -->
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="assets/huis.jpeg" style="width:100%">
+          <div class="text">Voorkant</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="assets/foto1.jpeg" style="width:100%">
+          <div class="text">Woonkamer</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="assets/foto2.jpeg" style="width:100%">
+          <div class="text">Keuken</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
 
     <div class="contact-nu">
       <p>Bel: 0687238281</p>
       <a class="contact-button" href="#mail">Stuur een mail</a>
     </div>
+
+    <div class="omschrijving-map">
     <div class="omschrijving">
       <h1>Omschrijving</h1>
       <p>
@@ -247,9 +288,12 @@
 
       <button onclick="readMore()" id="myBtn">Read more</button>
     </div>
+</div>
     <div id="map"></div>
 
+
     <script src="scripts/javascript.js"></script>
+    
 
     <h1>Kenmerken</h1>
     <p>
