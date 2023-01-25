@@ -3,7 +3,7 @@
     /* Collor */
     --Yellow: #f7a100;
     --white: #ffffff;
-
+    
     /* Font */
     --Font-type:  'Avenir',arial,sans-serif;
 }
@@ -13,7 +13,7 @@ header{
     background-color: var(--Yellow);
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     
 }
 header ul{
@@ -23,6 +23,11 @@ header ul{
     max-width: 390px;
     display: none;
     
+    
+}
+ul.tabjes{
+    padding-left: 0px;
+    margin-left: -40px;
 }
 
 ul li{
@@ -51,6 +56,10 @@ ul li a:hover{
     padding: 12px;
 }
 
+.home{
+    margin-left: auto;
+    /* margin-left: 150px; */
+}
 
 .home:hover, .login:hover{
     background-color: #654202;
@@ -143,6 +152,7 @@ body{
 .huis-prijs{
     float: right;
     margin-right: 20%;
+    font-size: 30px;
 }
 
 .adres{
@@ -177,17 +187,24 @@ body{
 }
 
 /* Contact button */
-.contact-nu{
+
+.contact-parent{
     display: flex;
-    float: right;
-    padding: 20px;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.contact-nu {
+    display: inline-flex;
     background-color: #654202;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     color: white;
-    width: 300px;
-    
+    padding: 20px;
+    align-items: center;
 }
+
+
 .contact-button, #myBtn {
     background-color: var(--Yellow);
     color: var(--white);
@@ -206,14 +223,30 @@ body{
 
 /* omschijving  */
 .omschrijving{
-    margin-top: 100px;
-    margin-left: 10%;
+    margin-left: 20px;
+    width: 50%;
 }
 
 .omschrijving-map{
     display: flex;
-    justify-content: center;
+    
 }
+
+
+
+/* Reclame en kenmerken */
+.reclame-kenmerken{
+    display: flex;
+}
+.reclame{
+    width: 50%;
+}
+.kenmerken{
+   
+}
+
+
+
 
 /* Media */
 @media (min-width: 400px){
@@ -221,7 +254,7 @@ body{
         
         max-width: 700px;
         margin: 20px;
-        width: 92%;
+        width: 100%;
     }
 }
 
@@ -247,24 +280,44 @@ body{
         width: 92%;
     }
 }
-@media (min-width: 880px){
+
+@media (max-width: 840px){
+.reclame-kenmerken{
+    /* display: flex; */
+}
+.omschrijving-map{
+    display: flex;
+    flex-direction: column;
+}
+#map{
+    width: 100%;
+}
+
+}
+
+@media (min-width: 900px){
     .dropbtn{
         display: none;
     }
     header ul{
-        display: contents;
+        display: flex;
         text-decoration: none;
     }
-        .carousel{
-            display: block;
-            margin-top: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 92%;
+    ul.tabjes{
+       /* display: flex;
+       margin-right: 00px; */
+    }
+
+    .carousel{
+        display: block;
+        margin-top: 50px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 92%;
         }
-        .logo{
-            margin-left: 150px;
+    .logo{
+        margin-left: 150px;
         }
     
 }
