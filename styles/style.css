@@ -6,7 +6,7 @@
     --Primary: #f7a100;
     --Secondary: #ffffff;
     --Tertiary: #654202;
-    
+    --Extra: 20px;
     /* Font */
     --Font-type:  'Avenir',arial,sans-serif;
 }
@@ -34,7 +34,7 @@ ul.tabjes{
 ul li a{
     color: var(--Secondary);
     padding: 8px;
-    border-radius: 20px;
+    border-radius: var(--Extra);
     background-color: #f7a100;
 }
 
@@ -44,14 +44,14 @@ ul li a:hover{
 
 .navmenu1{
     margin-top: 25px;
-    margin-left: 20px;
+    margin-left: var(--Extra);
 }
 
 .navmenu2{   
     color: var(--Secondary);
     text-decoration: none;
-    font-size: 20px;
-    border-radius: 20px;
+    font-size: var(--Extra);
+    border-radius: var(--Extra);
     padding: 12px;
 }
 
@@ -73,12 +73,12 @@ ul li a:hover{
     background-color: var(--Tertiary);
     color: var(--Secondary);
     padding: 16px;
-    font-size: 20px;
+    font-size: var(--Extra);
     border: none;
     cursor: pointer;
     text-align: center;
     margin-top: 12px;
-    margin-right: 20px;
+    margin-right:  var(--Extra);
     border-radius: 10%;
     
   }
@@ -127,7 +127,7 @@ body{
 
 .logo{
     max-width: 8rem;
-    margin-left: 20px;
+    margin-left: var(--Extra);
     animation-name: webLogo;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -150,18 +150,18 @@ body{
 
 .huis-prijs{
     float: right;
-    margin-right: 20%;
+    margin-right: var(--Extra);
     font-size: 30px;
 }
 
 .adres{
     margin-left: 10%;
-    padding: 20px;
+    padding: var(--Extra);
     background-color: var(--Tertiary);
     color: var(--Secondary);
-    border-radius: 20px;
+    border-radius: var(--Extra);
     max-width: 300px;
-    margin-top: 20px;
+    margin-top: var(--Extra);
 }
 
 .adres:hover{
@@ -203,10 +203,10 @@ body{
 .contact-nu {
     display: inline-flex;
     background-color: var(--Tertiary);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: var(--Extra);
+    border-bottom-left-radius: var(--Extra);
     color: var(--Secondary);
-    padding: 20px;
+    padding: var(--Extra);
     align-items: center;
 }
 
@@ -217,22 +217,22 @@ body{
     border: var(--Primary);
     padding: 14px;
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: var(--Extra);
     text-decoration: none;
     text-align: center;
 }
 .contact-button{
-    margin-left: 20px;
+    margin-left: var(--Extra);
 }
 /* Einde contact button */
 
 
 /* omschijving en map  */
 .omschrijving{
-    padding: 20px;
+    padding: var(--Extra);
     width: 50%;
     background-color: #ddd;
-    border-radius: 20px;
+    border-radius: var(--Extra);
 }
 
 .omschrijving-map{
@@ -244,10 +244,10 @@ body{
 
 /* Reclame en kenmerken */
 .kenmerken{
-    padding: 20px;
+    padding: var(--Extra);
     width: 50%;
     background-color: #ddd;
-    border-radius: 20px;
+    border-radius: var(--Extra);
 }
 .reclame{
     width: 50%;
@@ -255,72 +255,6 @@ body{
 .reclame-kenmerken{
     display: flex;
 }
-
-
-
-
-
-
-/* Media */
-
-@media (min-width: 550px){
-    
-    ul li a{
-        text-decoration: none;
-    }
-    
-    .logo{
-        margin-left: 50px;
-    }
-}
-
-
-
-@media (max-width: 840px){
-.reclame-kenmerken{
-    display: flex;
-    flex-direction: column;
-}
-.omschrijving-map{
-    display: flex;
-    flex-direction: column;
-}
-#map{
-    margin-left: 20px;
-    margin-right: 50px;
-    width: 80%;
-
-}
-.omschrijving, .kenmerken{
-    width: 100%;
-}
-
-
-}
-
-@media (min-width: 1000px){
-    .dropbtn{
-        display: none;
-    }
-    header ul{
-        display: flex;
-        text-decoration: none;
-    }
-    ul.tabjes{
-       display: flex;
-       margin-right: 100px;
-    }
-
-    .logo{
-        margin-left: 130px;
-        }
-    
-}
-
-
-
-
-
 
 
 
@@ -414,3 +348,69 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+
+
+
+/* Media */
+@media (min-width: 550px){
+    
+    ul li a{
+        text-decoration: none;
+    }
+    
+    .logo{
+        margin-left: 50px;
+    }
+}
+
+
+
+@media (max-width: 840px){
+.reclame-kenmerken{
+    display: flex;
+    flex-direction: column;
+}
+.omschrijving-map{
+    display: flex;
+    flex-direction: column;
+}
+#map{
+    margin-left: var(--Extra);
+    margin-right: 50px;
+    width: 80%;
+
+}
+.omschrijving, .kenmerken{
+    width: 100%;
+}
+
+
+}
+
+@media (min-width: 1000px){
+    .dropbtn{
+        display: none;
+    }
+    header ul{
+        display: flex;
+        text-decoration: none;
+    }
+    ul.tabjes{
+       display: flex;
+       margin-right: 100px;
+    }
+
+    .logo{
+        margin-left: 130px;
+        }
+    
+}
+
+
+
+
+
+
+
+
