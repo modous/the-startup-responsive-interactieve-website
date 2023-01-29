@@ -172,11 +172,6 @@ body{
 
 
 /* Readmore */
-.bold{  
-    margin-top: 50px;
-    color: var(--Primary);
-    
-}
 
 #more {
     display: none;
@@ -189,11 +184,13 @@ body{
     margin: 10px;
     width: 50%;
     display: flex;
-    float: right;
+    
 }
 
 /* Contact button */
-
+.bel{
+    color: var(--Secondary);
+}
 .contact-parent{
     display: flex;
     justify-content: flex-end;
