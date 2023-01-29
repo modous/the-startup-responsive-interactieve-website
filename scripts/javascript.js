@@ -48,15 +48,7 @@ function dropDown() {
     }
   }
 
-//   //Makes the button bigger after clicking
-//   let Scale = document.querySelector('a:nth-of-type(1)')
 
-//   Scale.addEventListener('click', scaleHandler)
-//   Scale.addEventListener('animationend', scaleHandler)
-  
-//   function scaleHandler() {
-//     Scale.classList.toggle('scale')
-//   }
 
 
 //CAROUSEL
@@ -86,3 +78,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+

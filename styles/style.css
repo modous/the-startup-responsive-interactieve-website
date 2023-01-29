@@ -1,8 +1,11 @@
+* {
+    box-sizing: border-box;
+}
 :root{
-
     /* Collor */
-    --Yellow: #f7a100;
-    --white: #ffffff;
+    --Primary: #f7a100;
+    --Secondary: #ffffff;
+    --Tertiary: #654202;
     
     /* Font */
     --Font-type:  'Avenir',arial,sans-serif;
@@ -10,67 +13,65 @@
 
 /* Header */
 header{
-    background-color: var(--Yellow);
+    background-color: var(--Primary);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100px;
-    
 }
+
 header ul{
     list-style-type: none;
     display: flex;
     align-items: center;
-    max-width: 390px;
     display: none;
-    
-    
 }
+
 ul.tabjes{
     padding-left: 0px;
     margin-left: -40px;
 }
 
-ul li{
-    margin-top: 25px;
-}
-
 ul li a{
-    color: white;
-    padding: 12px;
+    color: var(--Secondary);
+    padding: 8px;
     border-radius: 20px;
+    background-color: #f7a100;
 }
 
 ul li a:hover{
-    background-color: #654202;
+    background-color: var(--Tertiary);
 }
 
+.navmenu1{
+    margin-top: 25px;
+    margin-left: 20px;
+}
 
-.home, .login{
-    
-    color: white;
+.navmenu2{   
+    color: var(--Secondary);
     text-decoration: none;
     font-size: 20px;
-    margin-top: 25px;
-    max-width: 150px;
     border-radius: 20px;
     padding: 12px;
 }
 
 .home{
     margin-left: auto;
-    /* margin-left: 150px; */
+    
 }
 
 .home:hover, .login:hover{
-    background-color: #654202;
+    background-color: var(--Tertiary);
 }
 
-/* End header */
+
+
+
 
 /* Dropdown */
 .dropbtn {
-    background-color: #654202;
-    color: white;
+    background-color: var(--Tertiary);
+    color: var(--Secondary);
     padding: 16px;
     font-size: 20px;
     border: none;
@@ -114,13 +115,12 @@ ul li a:hover{
 .show {
     display: block;
 }
-
+/* End header */
 
 /* Body */
 body{
     font-family: var(--Font-type);
     margin: 0px;
-    
 }
 
 
@@ -133,21 +133,20 @@ body{
     animation-iteration-count: infinite;
 }
 
+
 @keyframes webLogo{
     0% {
         transform: scale(1);
       }
       50% {
-        transform: scale(1.3);
+        transform: scale(1.2);
       }
       100% {
         transform: scale(1);
       }
 }
 
-.carousel{
-    max-width: 100%;
-}
+
 
 .huis-prijs{
     float: right;
@@ -158,17 +157,24 @@ body{
 .adres{
     margin-left: 10%;
     padding: 20px;
-    background-color: #654202;
-    color: white;
+    background-color: var(--Tertiary);
+    color: var(--Secondary);
     border-radius: 20px;
     max-width: 300px;
     margin-top: 20px;
 }
 
+.adres:hover{
+    transform: scale(1.2);
+}
+
+
+
+
 /* Readmore */
 .bold{  
-    padding-top: 50px;
-    color: var(--Yellow);
+    margin-top: 50px;
+    color: var(--Primary);
     
 }
 
@@ -196,19 +202,19 @@ body{
 
 .contact-nu {
     display: inline-flex;
-    background-color: #654202;
+    background-color: var(--Tertiary);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    color: white;
+    color: var(--Secondary);
     padding: 20px;
     align-items: center;
 }
 
 
 .contact-button, #myBtn {
-    background-color: var(--Yellow);
-    color: var(--white);
-    border: var(--Yellow);
+    background-color: var(--Primary);
+    color: var(--Secondary);
+    border: var(--Primary);
     padding: 14px;
     font-size: 16px;
     border-radius: 20px;
@@ -221,10 +227,12 @@ body{
 /* Einde contact button */
 
 
-/* omschijving  */
+/* omschijving en map  */
 .omschrijving{
-    margin-left: 20px;
+    padding: 20px;
     width: 50%;
+    background-color: #ddd;
+    border-radius: 20px;
 }
 
 .omschrijving-map{
@@ -235,28 +243,25 @@ body{
 
 
 /* Reclame en kenmerken */
-.reclame-kenmerken{
-    display: flex;
+.kenmerken{
+    padding: 20px;
+    width: 50%;
+    background-color: #ddd;
+    border-radius: 20px;
 }
 .reclame{
     width: 50%;
 }
-.kenmerken{
-   
+.reclame-kenmerken{
+    display: flex;
 }
+
+
 
 
 
 
 /* Media */
-@media (min-width: 400px){
-    .carousel{
-        
-        max-width: 700px;
-        margin: 20px;
-        width: 100%;
-    }
-}
 
 @media (min-width: 550px){
     
@@ -271,31 +276,29 @@ body{
 
 
 
-@media (min-width: 760px){
-    .carousel{
-        display: block;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 92%;
-    }
-}
-
 @media (max-width: 840px){
 .reclame-kenmerken{
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
 }
 .omschrijving-map{
     display: flex;
     flex-direction: column;
 }
 #map{
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 80%;
+
+}
+.omschrijving, .kenmerken{
     width: 100%;
 }
 
+
 }
 
-@media (min-width: 900px){
+@media (min-width: 1000px){
     .dropbtn{
         display: none;
     }
@@ -304,20 +307,12 @@ body{
         text-decoration: none;
     }
     ul.tabjes{
-       /* display: flex;
-       margin-right: 00px; */
+       display: flex;
+       margin-right: 100px;
     }
 
-    .carousel{
-        display: block;
-        margin-top: 50px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 92%;
-        }
     .logo{
-        margin-left: 150px;
+        margin-left: 130px;
         }
     
 }
@@ -335,7 +330,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 900px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
   margin-top: 100px;
@@ -349,7 +344,7 @@ img {vertical-align: middle;}
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: var(--Secondary);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -370,7 +365,7 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: var(--Secondary);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -381,7 +376,7 @@ img {vertical-align: middle;}
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: var(--Secondary);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
