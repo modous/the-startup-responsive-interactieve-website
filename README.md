@@ -1,15 +1,20 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+De detail page van FUNDA
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Je kan in de detail page contact opnemen als je een geintereseerd bent in een huis.
+<img width="1319" alt="image" src="https://user-images.githubusercontent.com/34092733/215340013-11b478c1-a91c-4179-b329-aa852809e2d1.png">
+
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/34092733/215340039-248e0e69-3352-45a2-8a95-92370cdc3563.png">
+
+https://modous.github.io/the-startup-responsive-interactieve-website/
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
+Me html zit nu vol met sections en artikels er in en er worden alleen divjes gebruikt wanneer nodig. Mijn css is nu ook gecomment en ik gebruik custom properties. met javascript worden dingen zoals de dropdown en de map geregeld.
+
 
 
 ## Licentie
